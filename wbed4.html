@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form align="center" onsubmit="return validate()">
+
+        <label>
+            Name:
+            <input type="text" id="name">
+        </label>
+
+        <label>
+            Mobile:
+            <input type="text" id="number">
+        </label>
+
+        <label>
+            Email:
+            <input type="text" id="email">
+        </label>
+
+        <label>
+            Password:
+            <input type="password" id="password">
+        </label>
+
+        <label>
+            Confirm Password:
+            <input type="password" id="cpassword">
+        </label>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <script>
+        function validate() {
+
+    let a = document.getElementById("name").value;
+    let b = document.getElementById("number").value;
+    let c = document.getElementById("email").value;
+    let d = document.getElementById("password").value;
+    let e = document.getElementById("cpassword").value;
+
+    if (a.trim() == "") {
+        alert("Please enter your name");
+        return false;
+    }
+
+    if (b.trim() == "") {
+        alert("Please enter your mobile number");
+        return false;
+    }
+
+    if (c.trim() == "") {
+        alert("Please enter your email");
+        return false;
+    }
+
+    if (d.trim() == "") {
+        alert("Please enter your password");
+        return false;
+    }
+
+    if (e.trim() == "") {
+        alert("Please confirm your password");
+        return false;
+    }
+
+    if (d != e) {
+        alert("Passwords do not match");
+        return false;
+    }
+
+    alert("Registration successful!");
+    return true;
+}
+    </script>
+
+</body>
+</html>
