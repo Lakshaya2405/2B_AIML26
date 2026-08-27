@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = {
+    first : "lakshaya",
+    last : "kumar",
+    city : "ghaziabad",
+    salary : function(){
+         document.write("salary");
+    },
+    subject : ["web dev","c++","java"]
+}
+student.learning = "BTECH";
+student.section = "B";
+student.rollno = "2503215300103";
+delete student.rollno; 
+console.log(student.first);
+console.log(student.last);
+console.log(student.city);
+console.log(student.salary());
+console.log(student.subject[0]);
+console.log(student.subject[1]);
+console.log(student.learning);
+console.log(student.rollno);
+console.log(student.section);
+
+function students(name,rollnumber,pincode,city){
+    this.name = name;
+    this.rollnumber = rollnumber;
+    this.pincode = pincode;
+    this.city = city;
+    this.display = function(){
+        console.log(this.name);
+        console.log(this.rollnumber);
+        console.log(this.city);
+        console.log(this.pincode);
+    }
+}
+let s1 = new students("lakshaya",103,201009,"GZB");
+let s2 = new students("harshit",69,201001,"DELHI");
+let s3 = new students("gabru",145,201002,"MUZZAFARNAGAR");
+console.log(s1.name," ",s1.rollnumber," ",s2.name," ",s2.rollnumber);
+console.log(s1.display(),s2.display(),s3.display());
+class  studentss{
+      constructor(name,pincode){
+        this.name = name;
+        this.pincode = pincode;
+      }
+      display(){
+        console.log(this.name);
+        console.log(this.pindode);
+      }
+}
+    </script>
+
+</body>
+</html>
