@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bankAccount = {
+            holderName : "LAKSHAYA KUMAR",    
+            balance : 99000,
+            accNumber: 2503215300103,
+            deposit : function(amount){
+                this.balance += amount;
+                document.write("Deposited: " + amount + "<br>");
+                document.write("New Balance: " + this.balance + "<br>");
+            },
+            withdraw : function(amount){
+                if(amount <= this.balance){
+                    this.balance -= amount;
+                    document.write("Withdrawn: " + amount + "<br>");
+                    document.write("New Balance: " + this.balance + "<br>");
+                }
+                 else {
+                    document.write("Insufficient balance to withdraw " + amount + "<br>");
+                }
+            },
+            display : function(){
+                document.write("Account Holder: " + this.holderName + "<br>");
+                document.write("Account Number: " + this.accNumber + "<br>");
+                document.write("Current Balance: " + this.balance + "<br>");
+            }
+        };
+        bankAccount.display();
+        bankAccount.deposit(5000);
+        bankAccount.withdraw(3000);
+        bankAccount.withdraw(15000);
+    </script>
+</body>
+</html>
