@@ -1,0 +1,69 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//        let firstname = "lakshaya";
+//         let lastname = "kumar";
+
+//         console.log("My first name is " + firstname);
+//         console.log("My last name is " + lastname);
+
+//         console.log(`My first name is ${firstname}`);
+
+//         console.log(`My name is: ${firstname} ${lastname}`);
+
+//         console.log(`"My name is:" ${firstname} ${lastname}`);
+
+//         function fullname(first, last) {
+//             console.log(first);
+//             console.log(last);
+//         }
+
+//         fullname(firstname, lastname);
+//         function fname(first,last){
+//             return `${first} $ {last}`;
+//         }
+//         let name = `Hell ${fname(firstname,lastname)}`;
+//         console.log(name);
+//        let hello = () => console.log("hello lakshaya");
+//        hello();
+//        physics = (marks) => console.log(`${marks}`);
+//        physics(100);
+//        let pattern = (n) => {
+//            for (let i = 1; i <= n; i++) {
+//                let row = "";
+//            for (let j = 1; j <= i; j++) {
+//                row += "* ";
+//                 }
+//         console.log(row);
+//     }
+// };
+// pattern(3);
+function sum(...values){
+    let total = 0;
+    for(let n of values){
+        total += n;
+    }
+    return total;
+}
+console.log(sum(10,20));
+function sum(first,...values) { /// rest operator 
+    let total = 0;
+    for (let n of values) {
+        total += n;
+    }
+    console.log("Name: ", first);
+    console.log("Sum: ", total);
+}
+sum("lakshaya", 1, 2, 3, 4, 6);
+    </script>
+
+</body>
+</html>
